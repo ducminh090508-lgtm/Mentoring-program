@@ -1,0 +1,195 @@
+{
+    "designSystemProfile": {
+      "name": "Modern Course Dashboard UI",
+      "version": "1.0.0",
+      "description": "A design system for a sleek, modern course management dashboard with a dark sidebar and colorful content cards.",
+      "style": {
+        "palette": {
+          "primary": {
+            "background": "#F7FAFC",
+            "surface": "#FFFFFF",
+            "sidebar": "#1A202C"
+          },
+          "accent": {
+            "primary": "#4A90E2",
+            "secondary": "#5A67D8"
+          },
+          "text": {
+            "headings": "#1A202C",
+            "body": "#4A5568",
+            "subtle": "#A0AEC0",
+            "onDark": "#FFFFFF"
+          },
+          "cards": {
+            "graphicDesign": "#EBF8FF",
+            "motionDesign": "#F0FFF4",
+            "uiUxDesign": "#FFF5F5",
+            "artDesign": "#FFFBF0"
+          },
+          "status": {
+            "pending": "#FFC107"
+          },
+          "shadows": {
+            "subtle": "0px 2px 4px rgba(0, 0, 0, 0.04)",
+            "card": "0px 4px 12px rgba(0, 0, 0, 0.06)"
+          }
+        },
+        "typography": {
+          "fontFamily": "Inter, sans-serif",
+          "headings": {
+            "h1": {
+              "fontSize": "24px",
+              "fontWeight": "700"
+            },
+            "h2": {
+              "fontSize": "20px",
+              "fontWeight": "600"
+            },
+            "h3": {
+              "fontSize": "16px",
+              "fontWeight": "600"
+            }
+          },
+          "body": {
+            "medium": {
+              "fontSize": "14px",
+              "fontWeight": "400"
+            },
+            "small": {
+              "fontSize": "12px",
+              "fontWeight": "400"
+            }
+          }
+        },
+        "spacing": {
+          "baseUnit": "8px",
+          "padding": {
+            "small": "8px",
+            "medium": "16px",
+            "large": "24px",
+            "xlarge": "32px"
+          },
+          "gap": {
+            "small": "8px",
+            "medium": "16px",
+            "large": "24px"
+          }
+        },
+        "cornerRadius": {
+          "small": "6px",
+          "medium": "10px",
+          "large": "14px",
+          "full": "9999px"
+        }
+      },
+      "structure": {
+        "layout": {
+          "type": "sidebar-main-aside",
+          "background": {
+            "topCurve": "large sweeping curve, color palette.accent.primary",
+            "bottomCurve": "subtle wave-like curve, color palette.accent.primary"
+          },
+          "container": {
+            "backgroundColor": "palette.primary.surface",
+            "borderRadius": "cornerRadius.large",
+            "padding": "spacing.padding.large",
+            "boxShadow": "shadows.card",
+            "margin": "0 auto",
+            "maxWidth": "1440px"
+          },
+          "columns": {
+            "sidebar": {
+              "width": "90px",
+              "backgroundColor": "palette.primary.sidebar",
+              "padding": "spacing.padding.large 0"
+            },
+            "mainContent": {
+              "flex": "2.5",
+              "padding": "spacing.padding.large"
+            },
+            "rightPanel": {
+              "flex": "1",
+              "padding": "spacing.padding.large",
+              "borderLeft": "1px solid #E2E8F0"
+            }
+          }
+        }
+      },
+      "components": {
+        "button": {
+          "base": {
+            "borderRadius": "cornerRadius.medium",
+            "padding": "spacing.padding.small spacing.padding.medium",
+            "border": "1px solid #CBD5E0",
+            "cursor": "pointer",
+            "fontWeight": "600"
+          },
+          "variants": {
+            "primary": {
+              "backgroundColor": "palette.accent.primary",
+              "color": "palette.text.onDark",
+              "border": "none"
+            },
+            "secondary": {
+              "backgroundColor": "palette.primary.surface",
+              "color": "palette.text.body"
+            },
+            "sidebarIcon": {
+              "width": "48px",
+              "height": "48px",
+              "borderRadius": "cornerRadius.medium",
+              "border": "none",
+              "states": {
+                "active": {
+                  "backgroundColor": "palette.primary.surface"
+                },
+                "inactive": {
+                  "backgroundColor": "transparent"
+                }
+              }
+            }
+          }
+        },
+        "card": {
+          "base": {
+            "borderRadius": "cornerRadius.large",
+            "padding": "spacing.padding.medium",
+            "boxShadow": "shadows.subtle",
+            "backgroundColor": "palette.primary.surface"
+          },
+          "variants": {
+            "welcome": {
+              "backgroundColor": "palette.accent.primary",
+              "color": "palette.text.onDark",
+              "display": "flex",
+              "alignItems": "center"
+            },
+            "course": {
+              "backgroundColor": "oneOf(palette.cards)"
+            }
+          }
+        },
+        "dataTable": {
+          "header": {
+            "borderBottom": "1px solid #E2E8F0",
+            "color": "palette.text.subtle",
+            "fontWeight": "600",
+            "padding": "spacing.padding.small 0"
+          },
+          "row": {
+            "borderBottom": "1px solid #E2E8F0",
+            "padding": "spacing.padding.medium 0"
+          }
+        },
+        "icon": {
+          "size": "24px"
+        },
+        "progressBar": {
+          "height": "4px",
+          "backgroundColor": "rgba(0,0,0,0.1)",
+          "borderRadius": "cornerRadius.full"
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Dashboard - Learning Hub</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduHub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active" data-page="dashboard">Dashboard</a></li>
+                <li><a href="#" class="nav-link" data-page="courses">Courses</a></li>
+                <li><a href="#" class="nav-link" data-page="assignments">Assignments</a></li>
+                <li><a href="#" class="nav-link" data-page="schedule">Schedule</a></li>
+                <li><a href="#" class="nav-link" data-page="analytics">Analytics</a></li>
+                <li><a href="#" class="nav-link" data-page="profile">Profile</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <div class="user-avatar">
+                    <img src="https://via.placeholder.com/40x40/4CAF50/FFFFFF?text=JS" alt="John Smith">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Content -->
+    <div class="page-content" id="dashboard-page">
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-item">
+                    <button class="icon-button">
+                        <i class="fas fa-home"></i>
+                    </button>
+                </div>
+                <div class="sidebar-item">
+                    <button class="icon-button">
+                        <i class="fas fa-book"></i>
+                    </button>
+                </div>
+                <div class="sidebar-item">
+                    <button class="icon-button">
+                        <i class="fas fa-chart-bar"></i>
+                    </button>
+                </div>
+                <div class="sidebar-item">
+                    <button class="icon-button">
+                        <i class="fas fa-calendar"></i>
+                    </button>
+                </div>
+                <div class="sidebar-item">
+                    <button class="icon-button">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Welcome Section -->
+                <section class="welcome-section">
+                    <h1>Welcome back, John!</h1>
+                    <p>Here's what's happening with your learning today.</p>
+                </section>
+
+                <!-- Progress Overview Cards -->
+                <section class="progress-overview">
+                    <div class="card progress-card">
+                        <div class="card-header">
+                            <h3>Overall Progress</h3>
+                            <span class="progress-percentage">73%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-indicator" style="width: 73%"></div>
+                        </div>
+                        <p class="progress-text">12 of 16 courses completed</p>
+                    </div>
+
+                    <div class="card activity-card">
+                        <div class="card-header">
+                            <h3>Weekly Activity</h3>
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="activity-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">24</span>
+                                <span class="stat-label">Hours</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Lessons</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card streak-card">
+                        <div class="card-header">
+                            <h3>Learning Streak</h3>
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="streak-info">
+                            <span class="streak-number">12</span>
+                            <span class="streak-label">Days</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Active Lessons -->
+                <section class="active-lessons">
+                    <h2>Continue Learning</h2>
+                    <div class="lessons-grid">
+                        <div class="card lesson-card lesson-green">
+                            <div class="lesson-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="lesson-content">
+                                <h4>JavaScript Fundamentals</h4>
+                                <p>Advanced Functions & Closures</p>
+                                <div class="lesson-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-indicator" style="width: 65%"></div>
+                                    </div>
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                            <button class="continue-btn">Continue</button>
+                        </div>
+
+                        <div class="card lesson-card lesson-blue">
+                            <div class="lesson-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="lesson-content">
+                                <h4>React Development</h4>
+                                <p>State Management with Hooks</p>
+                                <div class="lesson-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-indicator" style="width: 40%"></div>
+                                    </div>
+                                    <span>40%</span>
+                                </div>
+                            </div>
+                            <button class="continue-btn">Continue</button>
+                        </div>
+
+                        <div class="card lesson-card lesson-purple">
+                            <div class="lesson-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="lesson-content">
+                                <h4>Database Design</h4>
+                                <p>SQL Queries & Optimization</p>
+                                <div class="lesson-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-indicator" style="width: 85%"></div>
+                                    </div>
+                                    <span>85%</span>
+                                </div>
+                            </div>
+                            <button class="continue-btn">Continue</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Upcoming Deadlines -->
+                <section class="deadlines-section">
+                    <h2>Upcoming Deadlines</h2>
+                    <div class="deadlines-list">
+                        <div class="deadline-item urgent">
+                            <div class="deadline-date">
+                                <span class="day">15</span>
+                                <span class="month">DEC</span>
+                            </div>
+                            <div class="deadline-content">
+                                <h4>JavaScript Project Submission</h4>
+                                <p>Final project for JavaScript Fundamentals course</p>
+                                <span class="deadline-time">Due in 2 days</span>
+                            </div>
+                            <div class="deadline-status urgent">Urgent</div>
+                        </div>
+
+                        <div class="deadline-item">
+                            <div class="deadline-date">
+                                <span class="day">18</span>
+                                <span class="month">DEC</span>
+                            </div>
+                            <div class="deadline-content">
+                                <h4>React Component Quiz</h4>
+                                <p>Multiple choice quiz on React components</p>
+                                <span class="deadline-time">Due in 5 days</span>
+                            </div>
+                            <div class="deadline-status">Pending</div>
+                        </div>
+
+                        <div class="deadline-item">
+                            <div class="deadline-date">
+                                <span class="day">22</span>
+                                <span class="month">DEC</span>
+                            </div>
+                            <div class="deadline-content">
+                                <h4>Database Schema Design</h4>
+                                <p>Design a database schema for e-commerce</p>
+                                <span class="deadline-time">Due in 9 days</span>
+                            </div>
+                            <div class="deadline-status">Scheduled</div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Right Panel -->
+            <aside class="right-panel">
+                <!-- Calendar Widget -->
+                <div class="card calendar-widget">
+                    <div class="calendar-header">
+                        <button class="nav-btn" id="prevMonth">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h3 id="currentMonth">December 2024</h3>
+                        <button class="nav-btn" id="nextMonth">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="day-header">S</div>
+                        <div class="day-header">M</div>
+                        <div class="day-header">T</div>
+                        <div class="day-header">W</div>
+                        <div class="day-header">T</div>
+                        <div class="day-header">F</div>
+                        <div class="day-header">S</div>
+                        <!-- Calendar days will be generated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Recent Submissions -->
+                <div class="card recent-submissions">
+                    <h3>Recent Submissions</h3>
+                    <div class="submissions-list">
+                        <div class="submission-item">
+                            <div class="submission-icon completed">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="submission-content">
+                                <h4>CSS Grid Layout</h4>
+                                <p>Submitted 2 hours ago</p>
+                            </div>
+                            <span class="submission-grade">95%</span>
+                        </div>
+
+                        <div class="submission-item">
+                            <div class="submission-icon completed">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="submission-content">
+                                <h4>Algorithm Challenge</h4>
+                                <p>Submitted yesterday</p>
+                            </div>
+                            <span class="submission-grade">88%</span>
+                        </div>
+
+                        <div class="submission-item">
+                            <div class="submission-icon pending">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="submission-content">
+                                <h4>React Hooks Exercise</h4>
+                                <p>Under review</p>
+                            </div>
+                            <span class="submission-grade">Pending</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session Analytics -->
+                <div class="card session-analytics">
+                    <h3>Today's Session</h3>
+                    <div class="analytics-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Time Spent</span>
+                            <span class="stat-value">2h 45m</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Lessons Completed</span>
+                            <span class="stat-value">3</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Questions Answered</span>
+                            <span class="stat-value">24</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Accuracy</span>
+                            <span class="stat-value">92%</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Temporary Pages -->
+    <div class="page-content" id="courses-page" style="display: none;">
+        <div class="temp-page">
+            <h1>Courses</h1>
+            <p>This is a temporary page for courses navigation.</p>
+        </div>
+    </div>
+
+    <div class="page-content" id="assignments-page" style="display: none;">
+        <div class="temp-page">
+            <h1>Assignments</h1>
+            <p>This is a temporary page for assignments navigation.</p>
+        </div>
+    </div>
+
+    <div class="page-content" id="schedule-page" style="display: none;">
+        <div class="temp-page">
+            <h1>Schedule</h1>
+            <p>This is a temporary page for schedule navigation.</p>
+        </div>
+    </div>
+
+    <div class="page-content" id="analytics-page" style="display: none;">
+        <div class="temp-page">
+            <h1>Analytics</h1>
+            <p>This is a temporary page for analytics navigation.</p>
+        </div>
+    </div>
+
+    <div class="page-content" id="profile-page" style="display: none;">
+        <div class="temp-page">
+            <h1>Profile</h1>
+            <p>This is a temporary page for profile navigation.</p>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+{
+    "designSystemProfile": {
+      "name": "Soft Learning Dashboard UI",
+      "version": "1.0.0",
+      "description": "A design system for a clean, friendly, and modern e-learning dashboard with a soft, rounded aesthetic.",
+      "style": {
+        "palette": {
+          "primary": {
+            "background": "#FFFFFF",
+            "surface": "#F7F8FA",
+            "onPrimary": "#1A1A1A"
+          },
+          "secondary": {
+            "accent": "#D6E4FF",
+            "subtle": "#E9EFFC"
+          },
+          "text": {
+            "headings": "#1C1C1E",
+            "body": "#3C3C43",
+            "subtle": "#8A8A8E",
+            "onAccent": "#FFFFFF"
+          },
+          "cards": {
+            "lightGreen": "#E0F3E9",
+            "lightBlue": "#DDEBFF",
+            "lightPurple": "#EAE5FF",
+            "lightYellow": "#FFF6D4",
+            "lightPink": "#FFE5F1"
+          },
+          "status": {
+            "active": "#4CAF50",
+            "inactive": "#BDBDBD"
+          },
+          "shadows": {
+            "soft": "0px 4px 12px rgba(0, 0, 0, 0.05)",
+            "medium": "0px 8px 24px rgba(0, 0, 0, 0.08)"
+          }
+        },
+        "typography": {
+          "fontFamily": "Inter, sans-serif",
+          "headings": {
+            "h1": {
+              "fontSize": "28px",
+              "fontWeight": "700"
+            },
+            "h2": {
+              "fontSize": "22px",
+              "fontWeight": "600"
+            },
+            "h3": {
+              "fontSize": "18px",
+              "fontWeight": "600"
+            }
+          },
+          "body": {
+            "large": {
+              "fontSize": "16px",
+              "fontWeight": "400"
+            },
+            "medium": {
+              "fontSize": "14px",
+              "fontWeight": "400"
+            },
+            "small": {
+              "fontSize": "12px",
+              "fontWeight": "500"
+            }
+          }
+        },
+        "spacing": {
+          "baseUnit": "8px",
+          "padding": {
+            "small": "8px",
+            "medium": "16px",
+            "large": "24px",
+            "xlarge": "32px"
+          },
+          "gap": {
+            "small": "8px",
+            "medium": "16px",
+            "large": "24px"
+          }
+        },
+        "cornerRadius": {
+          "small": "8px",
+          "medium": "12px",
+          "large": "16px",
+          "xlarge": "20px",
+          "full": "9999px"
+        }
+      },
+      "structure": {
+        "layout": {
+          "type": "three-column",
+          "container": {
+            "backgroundColor": "palette.primary.surface",
+            "borderRadius": "cornerRadius.xlarge",
+            "padding": "spacing.padding.large",
+            "boxShadow": "shadows.medium"
+          },
+          "columns": {
+            "sidebar": {
+              "width": "80px",
+              "alignment": "center",
+              "padding": "spacing.padding.medium 0"
+            },
+            "mainContent": {
+              "flex": "2",
+              "padding": "0 spacing.padding.large"
+            },
+            "rightPanel": {
+              "flex": "1",
+              "padding": "0 0 0 spacing.padding.large"
+            }
+          }
+        }
+      },
+      "components": {
+        "card": {
+          "base": {
+            "borderRadius": "cornerRadius.large",
+            "padding": "spacing.padding.medium",
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "space-between",
+            "boxShadow": "shadows.soft",
+            "transition": "transform 0.2s ease-in-out"
+          },
+          "variants": {
+            "activity": {
+              "backgroundColor": "palette.secondary.subtle"
+            },
+            "progress": {
+              "backgroundColor": "palette.primary.background"
+            },
+            "lesson": {
+              "backgroundColor": "oneOf(palette.cards)",
+              "flexDirection": "row",
+              "alignItems": "center"
+            }
+          }
+        },
+        "button": {
+          "base": {
+            "borderRadius": "cornerRadius.full",
+            "padding": "spacing.padding.small",
+            "border": "none",
+            "cursor": "pointer",
+            "display": "flex",
+            "alignItems": "center",
+            "justifyContent": "center"
+          },
+          "variants": {
+            "icon": {
+              "width": "40px",
+              "height": "40px",
+              "backgroundColor": "palette.primary.background"
+            },
+            "navigation": {
+              "width": "24px",
+              "height": "24px",
+              "backgroundColor": "transparent"
+            }
+          }
+        },
+        "icon": {
+          "size": "20px",
+          "color": "palette.text.body"
+        },
+        "avatar": {
+          "size": "40px",
+          "borderRadius": "cornerRadius.full"
+        },
+        "progressBar": {
+          "height": "6px",
+          "backgroundColor": "palette.secondary.subtle",
+          "borderRadius": "cornerRadius.full",
+          "indicator": {
+            "backgroundColor": "palette.text.headings",
+            "borderRadius": "cornerRadius.full"
+          }
+        },
+        "calendar": {
+          "header": {
+            "display": "flex",
+            "justifyContent": "space-between",
+            "alignItems": "center",
+            "marginBottom": "spacing.gap.medium"
+          },
+          "grid": {
+            "display": "grid",
+            "gridTemplateColumns": "repeat(7, 1fr)",
+            "gap": "spacing.gap.small"
+          },
+          "day": {
+            "base": {
+              "textAlign": "center",
+              "padding": "spacing.padding.small",
+              "borderRadius": "cornerRadius.full",
+              "cursor": "pointer"
+            },
+            "states": {
+              "today": {
+                "backgroundColor": "palette.text.headings",
+                "color": "palette.primary.background"
+              },
+              "selected": {
+                "border": "2px solid palette.text.headings"
+              },
+              "disabled": {
+                "color": "palette.text.subtle"
+              }
+            }
+          }
+        },
+        "searchInput": {
+          "backgroundColor": "palette.primary.background",
+          "borderRadius": "cornerRadius.medium",
+          "padding": "spacing.padding.small spacing.padding.medium",
+          "border": "1px solid transparent",
+          "display": "flex",
+          "alignItems": "center",
+          "gap": "spacing.gap.small",
+          "focus": {
+            "borderColor": "palette.secondary.accent"
+          }
+        }
+      }
+    }
+  }
+  
